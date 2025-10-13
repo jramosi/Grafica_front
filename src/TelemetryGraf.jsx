@@ -24,7 +24,7 @@ ChartJS.register(
 );
 
 const MAX_POINTS = 360; // Máximo de puntos a mostrar (igual que en tu config de Python)
-const BACKEND_URL = 'http://localhost:4000'; // Asegúrate de que coincida con tu Node.js
+const BACKEND_URL = 'https://grafica-back.onrender.com'; // Asegúrate de que coincida con tu Node.js
 
 const TelemetryGraphs = () => {
     const [status, setStatus] = useState('Conectando...');
