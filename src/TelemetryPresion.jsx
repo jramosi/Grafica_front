@@ -134,7 +134,7 @@ const TelemetryPresion = () => {
             </div>
             
             
-            <p>Se reciben datos para {chartData.temperature.length} puntos. (Máx. {MAX_POINTS})</p>
+            <p>Se reciben datos para {chartData.pressure.length} puntos. (Máx. {MAX_POINTS})</p>
         </div>
     );
 };
