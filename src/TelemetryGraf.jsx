@@ -44,7 +44,7 @@ const TelemetryGraphs = () => {
         // --- HANDLER CLAVE: RECIBIR Y PROCESAR DATOS ---
         socket.on('telemetry', (data) => {
             // Solo graficaremos el primer dispositivo como ejemplo (THB-01)
-            if (data.device === 'THB-03') {
+            if (data.device === 'THB-02') {
                 
                 const timeLabel = new Date(data.ts * 1000 || Date.now()).toLocaleTimeString();
                 
@@ -75,7 +75,7 @@ const TelemetryGraphs = () => {
         labels: chartData.labels,
         datasets: [
             {
-                label: 'Temperatura THB-03 (°C)',
+                label: 'Temperatura THB-02 (°C)',
                 data: chartData.temperature,
                 borderColor: 'rgb(255, 99, 132)', // Rojo
                 backgroundColor: 'rgba(255, 99, 132, 0.5)',
@@ -116,7 +116,7 @@ const TelemetryGraphs = () => {
             },
             title: {
                 display: true,
-                text: 'Temperatura en Tiempo Real (THB-03)',
+                text: 'Temperatura en Tiempo Real (THB-02)',
             },
         },
     };
