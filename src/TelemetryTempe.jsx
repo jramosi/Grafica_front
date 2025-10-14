@@ -47,7 +47,10 @@ const TelemetryTempe = () => {
             if (data.device === 'THB-02') {
                 
                 const timeLabel = new Date(data.ts * 1000 || Date.now()).toLocaleTimeString();
+                console.log("-------------------------------------------------------");
                 console.log("Temperatura:__"+data.temp_c+"_°C__hora:"+timeLabel);
+                console.log("Humedad:__"+data.hum_pct+"_%___hora:"+timeLabel);
+                console.log("Presion:__"+data.pres_hpa+"_Pa__hora:"+timeLabel);
                 setChartData(prevData => {
                     // Copiar y truncar a MAX_POINTS
                     const newLabels = [...prevData.labels, timeLabel].slice(-MAX_POINTS);
@@ -85,8 +88,6 @@ const TelemetryTempe = () => {
             // Aquí se añadirían Presión y Humedad si quisieras varias líneas
         ],
     };
-    console.log(data);
-    
     const options = {
         responsive: true,
         maintainAspectRatio: false, // Permite que el gráfico use el espacio del contenedor
@@ -123,9 +124,8 @@ const TelemetryTempe = () => {
 
     return (
         <div>
-            <h1>Grafico en Tiempo Real - Temperatura</h1>
+            <h3>Grafico en Tiempo Real - Temperatura</h3>
             <p>Estado del Backend: "{status}"</p>
-            
             <div style={{ height: '250px', width: '100%' }}>
                 {/* Renderizar el componente Line */}
                 <Line options={options} data={data} />

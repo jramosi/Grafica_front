@@ -47,7 +47,7 @@ const TelemetryHume = () => {
             if (data.device === 'THB-02') {
                 
                 const timeLabel = new Date(data.ts * 1000 || Date.now()).toLocaleTimeString();
-                console.log("Humedad:__"+data.hum_pct+"%___hora:"+timeLabel);
+                
                 setChartData(prevData => {
                     // Copiar y truncar a MAX_POINTS
                     const newLabels = [...prevData.labels, timeLabel].slice(-MAX_POINTS);
@@ -122,9 +122,7 @@ const TelemetryHume = () => {
 
     return (
         <div>
-            <h1>Grafico en Tiempo Real - Humedad</h1>
-            <p>Estado del Backend: "{status}"</p>
-            
+            <h3>Grafico en Tiempo Real - Humedad</h3>
             <div style={{ height: '250px', width: '100%' }}>
                 {/* Renderizar el componente Line */}
                 <Line options={options} data={data} />
