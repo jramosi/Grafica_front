@@ -77,17 +77,17 @@ const TelemetryPresion = () => {
         labels: chartData.labels,
         datasets: [
             {
-                label: 'Temperatura THB-02 (°C)',
+                label: 'Presion THB-02 (°C)',
                 data: chartData.pressure,
-                borderColor: 'rgb(255, 99, 132)', // Rojo
-                backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                borderColor: 'rgba(14, 178, 243, 1)', // Rojo
+                backgroundColor: 'rgba(27, 205, 218, 0.5)',
                 tension: 0.1, // Suaviza la línea
                 pointRadius: 0, // Ocultar puntos para looks de tiempo real
             },
             // Aquí se añadirían Presión y Humedad si quisieras varias líneas
         ],
     };
-    console.log(data);
+    //console.log(data);
     
     const options = {
         responsive: true,
