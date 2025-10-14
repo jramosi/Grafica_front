@@ -99,7 +99,7 @@ const TelemetryPresion = () => {
                     text: 'Presion (Pa)'
                 },
                 min: 0, // Coincide con tu TEMP_RANGE
-                max: 50, // Coincide con tu TEMP_RANGE
+                max: 1000, // Coincide con tu TEMP_RANGE
             },
             x: {
                 title: {
