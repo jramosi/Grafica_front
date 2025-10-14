@@ -126,7 +126,7 @@ const TelemetryTempe = () => {
             <h1>Grafico en Tiempo Real - Temperatura</h1>
             <p>Estado del Backend: "{status}"</p>
             
-            <div style={{ height: '200px', width: '100%' }}>
+            <div style={{ height: '250px', width: '100%' }}>
                 {/* Renderizar el componente Line */}
                 <Line options={options} data={data} />
             </div>

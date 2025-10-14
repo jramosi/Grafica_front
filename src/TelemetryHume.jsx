@@ -47,15 +47,15 @@ const TelemetryHume = () => {
             if (data.device === 'THB-02') {
                 
                 const timeLabel = new Date(data.ts * 1000 || Date.now()).toLocaleTimeString();
-                
+                console.log("Humedad:__"+data.hum_pct+"%___hora:"+timeLabel);
                 setChartData(prevData => {
                     // Copiar y truncar a MAX_POINTS
                     const newLabels = [...prevData.labels, timeLabel].slice(-MAX_POINTS);
-                    const newTemps = [...prevData.temperature, data.temp_c].slice(-MAX_POINTS);
+                    const newTemps = [...prevData.humidity, data.hum_pct].slice(-MAX_POINTS);
 
                     return {
                         labels: newLabels,
-                        temperature: newTemps,
+                        humidity: newTemps,
                     };
                 });
 
@@ -76,9 +76,9 @@ const TelemetryHume = () => {
         datasets: [
             {
                 label: 'Temperatura THB-02 (°C)',
-                data: chartData.temperature,
-                borderColor: 'rgb(255, 99, 132)', // Rojo
-                backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                data: chartData.humidity,
+                borderColor: 'rgba(5, 243, 96, 1)', // Rojo
+                backgroundColor: 'rgba(18, 226, 98, 0.5)',
                 tension: 0.1, // Suaviza la línea
                 pointRadius: 0, // Ocultar puntos para looks de tiempo real
             },
@@ -94,7 +94,7 @@ const TelemetryHume = () => {
             y: {
                 title: {
                     display: true,
-                    text: 'Temperatura (°C)'
+                    text: 'Humedad (%)'
                 },
                 min: 0, // Coincide con tu TEMP_RANGE
                 max: 50, // Coincide con tu TEMP_RANGE
@@ -116,23 +116,20 @@ const TelemetryHume = () => {
             },
             title: {
                 display: true,
-                text: 'Temperatura en Tiempo Real (THB-02)',
+                text: 'Humedad en Tiempo Real (THB-02)',
             },
         },
     };
 
     return (
         <div>
-            <h1>Grafico en Tiempo Real - Temperatura</h1>
+            <h1>Grafico en Tiempo Real - Humedad</h1>
             <p>Estado del Backend: "{status}"</p>
             
-            <div style={{ height: '400px', width: '90%' }}>
+            <div style={{ height: '250px', width: '100%' }}>
                 {/* Renderizar el componente Line */}
                 <Line options={options} data={data} />
             </div>
-            
-            
-            <p>Se reciben datos para {chartData.temperature.length} puntos. (Máx. {MAX_POINTS})</p>
         </div>
     );
 };

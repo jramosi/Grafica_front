@@ -47,7 +47,7 @@ const TelemetryPresion = () => {
             if (data.device === 'THB-02') {
                 
                 const timeLabel = new Date(data.ts * 1000 || Date.now()).toLocaleTimeString();
-                console.log("Presion:__"+data.pres_hpa+"__hora:"+timeLabel);
+                console.log("Presion:__"+data.pres_hpa+"_Pa__hora:"+timeLabel);
                 
                 
                 setChartData(prevData => {
@@ -128,7 +128,7 @@ const TelemetryPresion = () => {
             <h1>Grafico en Tiempo Real - Presion</h1>
             <p>Estado del Backend: "{status}"</p>
             
-            <div style={{ height: '400px', width: '90%' }}>
+            <div style={{ height: '250px', width: '100%' }}>
                 {/* Renderizar el componente Line */}
                 <Line options={options} data={data} />
             </div>

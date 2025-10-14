@@ -5,10 +5,12 @@ import { createRoot } from 'react-dom/client'
 //import TelemetryClient from './TelemetryClient'
 import TelemetryTempe from './TelemetryTempe'
 import TelemetryPresion from './TelemetryPresion'
+import TelemetryHume from './TelemetryHume'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <TelemetryTempe />
     <TelemetryPresion />
+    <TelemetryHume />
   </StrictMode>,
 )
