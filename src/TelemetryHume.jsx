@@ -115,14 +115,13 @@ const TelemetryHume = () => {
             },
             title: {
                 display: true,
-                text: 'Humedad en Tiempo Real (THB-02)',
+                text: `Humedad (%) en Tiempo Real (THB-02) - Estado:${status}`,
             },
         },
     };
 
     return (
         <div>
-            <h3>Grafico en Tiempo Real - Humedad</h3>
             <div style={{ height: '250px', width: '100%' }}>
                 {/* Renderizar el componente Line */}
                 <Line options={options} data={data} />

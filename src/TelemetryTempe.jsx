@@ -117,15 +117,13 @@ const TelemetryTempe = () => {
             },
             title: {
                 display: true,
-                text: 'Temperatura en Tiempo Real (THB-02)',
+                text: `Temperatura (°C) en Tiempo Real (THB-02) - Estado:${status}`,
             },
         },
     };
 
     return (
         <div>
-            <h3>Grafico en Tiempo Real - Temperatura</h3>
-            <p>Estado del Backend: "{status}"</p>
             <div style={{ height: '250px', width: '100%' }}>
                 {/* Renderizar el componente Line */}
                 <Line options={options} data={data} />
