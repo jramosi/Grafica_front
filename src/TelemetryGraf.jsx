@@ -127,7 +127,7 @@ const TelemetryGraphs = () => {
             <p>Estado del Backend: "{status}"</p>
             
             <div style={{ height: '400px', width: '90%' }}>
-                {/* 3. Renderizar el componente Line */}
+                {/* Renderizar el componente Line */}
                 <Line options={options} data={data} />
             </div>
             
