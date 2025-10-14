@@ -96,7 +96,7 @@ const TelemetryHume = () => {
                     text: 'Humedad (%)'
                 },
                 min: 0, // Coincide con tu TEMP_RANGE
-                max: 50, // Coincide con tu TEMP_RANGE
+                max: 100, // Coincide con tu TEMP_RANGE
             },
             x: {
                 title: {
