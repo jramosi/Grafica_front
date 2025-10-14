@@ -123,8 +123,8 @@ const TelemetryGraphs = () => {
 
     return (
         <div>
-            <h1>THB Telemetría - Grafico en tiempo Real</h1>
-            <p>Estado del Backend: **{status}**</p>
+            <h1>Grafico en Tiempo Real - Temperatura</h1>
+            <p>Estado del Backend: "{status}"</p>
             
             <div style={{ height: '400px', width: '90%' }}>
                 {/* 3. Renderizar el componente Line */}
