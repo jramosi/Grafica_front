@@ -31,7 +31,7 @@ const TelemetryHume = () => {
     // Estado para almacenar los datos del primer dispositivo (THB-01)
     const [chartData, setChartData] = useState({
         labels: [], // Eje X: Horas
-        temperature: [], // Eje Y: Temperatura (°C)
+        humidity: [], // Eje Y: Humedad (°C)
     });
 
     useEffect(() => {
@@ -85,7 +85,6 @@ const TelemetryHume = () => {
             // Aquí se añadirían Presión y Humedad si quisieras varias líneas
         ],
     };
-    console.log(data);
     
     const options = {
         responsive: true,
