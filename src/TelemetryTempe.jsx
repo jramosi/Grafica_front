@@ -47,7 +47,7 @@ const TelemetryTempe = () => {
             if (data.device === 'THB-02') {
                 
                 const timeLabel = new Date(data.ts * 1000 || Date.now()).toLocaleTimeString();
-                
+                console.log("Temperatura:__"+data.temp_c+"_°C__hora:"+timeLabel);
                 setChartData(prevData => {
                     // Copiar y truncar a MAX_POINTS
                     const newLabels = [...prevData.labels, timeLabel].slice(-MAX_POINTS);
@@ -126,13 +126,11 @@ const TelemetryTempe = () => {
             <h1>Grafico en Tiempo Real - Temperatura</h1>
             <p>Estado del Backend: "{status}"</p>
             
-            <div style={{ height: '400px', width: '90%' }}>
+            <div style={{ height: '200px', width: '100%' }}>
                 {/* Renderizar el componente Line */}
                 <Line options={options} data={data} />
             </div>
             
-            
-            <p>Se reciben datos para {chartData.temperature.length} puntos. (Máx. {MAX_POINTS})</p>
         </div>
     );
 };
