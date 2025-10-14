@@ -1,4 +1,4 @@
-// TelemetryClient.jsx
+
 import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 
@@ -10,7 +10,7 @@ const TelemetryClient = () => {
     useEffect(() => {
         console.log(`Intentando conectar a Socket.IO en ${BACKEND_URL}`);
 
-        // 1. CONEXIÓN AL BACKEND DE SOCKET.IO
+        // CONEXIÓN AL BACKEND DE SOCKET.IO
         const socket = io(BACKEND_URL);
 
         // --- Handlers de Eventos ---
@@ -20,7 +20,7 @@ const TelemetryClient = () => {
             setStatus('Conectado a Node.js ');
         });
         
-        // 🔑 PASO CRÍTICO: RECIBIR LOS DATOS EMITIDOS POR EL BACKEND
+        //  PASO CRÍTICO: RECIBIR LOS DATOS EMITIDOS POR EL BACKEND
         socket.on('telemetry', (data) => {
             // Formatear para consola
             const hora = new Date(data.ts * 1000 || Date.now()).toLocaleTimeString();
