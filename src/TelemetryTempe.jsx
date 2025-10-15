@@ -78,7 +78,7 @@ const TelemetryTempe = () => {
         labels: chartData.labels,
         datasets: [
             {
-                label: 'Temperatura THB-02 (°C)',
+                label: `Temperatura (°C) -  Estado:${status}`,
                 data: chartData.temperature,
                 borderColor: 'rgb(255, 99, 132)', // Rojo
                 backgroundColor: 'rgba(255, 99, 132, 0.5)',
@@ -95,7 +95,7 @@ const TelemetryTempe = () => {
             y: {
                 title: {
                     display: true,
-                    text: `Temperatura (°C) -  Estado:${status}`
+                    text: `Temperatura (°C)`
                 },
                 min: 0, // Coincide con tu TEMP_RANGE
                 max: 50, // Coincide con tu TEMP_RANGE

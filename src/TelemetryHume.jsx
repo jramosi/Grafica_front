@@ -75,7 +75,7 @@ const TelemetryHume = () => {
         labels: chartData.labels,
         datasets: [
             {
-                label: 'Temperatura THB-02 (°C)',
+                label: `Humedad (%) -  Estado:${status}`,
                 data: chartData.humidity,
                 borderColor: 'rgba(5, 243, 96, 1)', // Rojo
                 backgroundColor: 'rgba(18, 226, 98, 0.5)',
@@ -93,7 +93,7 @@ const TelemetryHume = () => {
             y: {
                 title: {
                     display: true,
-                    text: `Humedad (%) -  Estado:${status}`
+                    text: `Humedad (%)`
                 },
                 min: 0, // Coincide con tu TEMP_RANGE
                 max: 100, // Coincide con tu TEMP_RANGE

@@ -77,7 +77,7 @@ const TelemetryPresion = () => {
         labels: chartData.labels,
         datasets: [
             {
-                label: 'Presion THB-02 (°C)',
+                label: `Presion (Pa) -  Estado:${status}`,
                 data: chartData.pressure,
                 borderColor: 'rgba(14, 178, 243, 1)', // Rojo
                 backgroundColor: 'rgba(27, 205, 218, 0.5)',
@@ -96,7 +96,7 @@ const TelemetryPresion = () => {
             y: {
                 title: {
                     display: true,
-                    text: `Presion (Pa) -  Estado:${status}`
+                    text: `Presion (Pa)`
                 },
                 min: 0, // Coincide con tu TEMP_RANGE
                 max: 1000, // Coincide con tu TEMP_RANGE
