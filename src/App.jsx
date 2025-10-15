@@ -1,8 +1,7 @@
-import { useState } from 'react';
 import TelemetryTempe from './TelemetryTempe'
 import TelemetryPresion from './TelemetryPresion'
 import TelemetryHume from './TelemetryHume'
-
+import './App.css'
 const App = () => {
   return (
     
