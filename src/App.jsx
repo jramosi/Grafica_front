@@ -9,13 +9,13 @@ const App = () => {
     <>
       <div className='app-container'>
         <div className='card'>
-          <TelemetryTempe th={opcion}/>
+          <TelemetryTempe />
         </div>
         <div className='card'>
-          <TelemetryPresion th={opcion}/>
+          <TelemetryPresion />
         </div>
         <div className='card'>
-          <TelemetryHume th={opcion} />
+          <TelemetryHume />
         </div>
       </div>
     </> 
