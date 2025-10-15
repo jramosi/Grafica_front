@@ -11,7 +11,7 @@ const App = () => {
     
     <>
       <div className='app-container'>
-        <h2>Graficos de THB-02 en Tiempo Real</h2>
+        <h2>Graficos de THB-03 en Tiempo Real</h2>
         <div className='card'>
           <TelemetryTempe />
         </div>

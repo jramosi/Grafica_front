@@ -45,7 +45,7 @@ const TelemetryPresion = () => {
         // --- HANDLER CLAVE: RECIBIR Y PROCESAR DATOS ---
         socket.on('telemetry', (data) => {
             // Solo graficaremos el primer dispositivo como ejemplo (THB-01)
-            if (data.device === "THB-02") {
+            if (data.device === "THB-03") {
                 
                 const timeLabel = new Date(data.ts * 1000 || Date.now()).toLocaleTimeString();
                 

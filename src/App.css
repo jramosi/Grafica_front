@@ -4,13 +4,13 @@
   align-items: center;
   gap: 20px;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #C4D1F2;
   min-height: 100dvh; 
 }
 
 .card {
   width: 90%;
-  background-color: #fff;
+  background-color: #f4f4f7f8;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
