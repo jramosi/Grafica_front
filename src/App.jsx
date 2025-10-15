@@ -6,15 +6,12 @@ const selector = process.env.REACT_APP_SELECTOR_THB;
 
 
 const App = () => {
-  console.log(process.env);
-  
-  console.log("vvariavle:"+ selector);
   
   return (
     
     <>
       <div className='app-container'>
-        <h2>Graficos de {selector} en Tiempo Real</h2>
+        <h2>Graficos de THB-02 en Tiempo Real</h2>
         <div className='card'>
           <TelemetryTempe />
         </div>
