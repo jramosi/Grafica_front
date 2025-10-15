@@ -15,9 +15,9 @@ const App = () => {
       <h2>Selecciona una opción:</h2>
       <select value={opcion} onChange={handleChange}>
         <option value="">-- Elige --</option>
-        <option value="La Paz">La Paz</option>
-        <option value="Cobija">Cobija</option>
-        <option value="Riberalta">Riberalta</option>
+        <option value="THB-02">THB-02</option>
+        <option value="THB-03">THB-03</option>
+        <option value="THB-04">THB-04</option>
       </select>
       {opcion && <p>Seleccionaste: <strong>{opcion}</strong></p>}
       <div>
