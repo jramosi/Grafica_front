@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import TelemetryTempe from './TelemetryTempe'
+import TelemetryPresion from './TelemetryPresion'
+import TelemetryHume from './TelemetryHume'
 
 const App = () => {
   const [opcion, setOpcion] = useState('');
@@ -16,8 +19,18 @@ const App = () => {
         <option value="Cobija">Cobija</option>
         <option value="Riberalta">Riberalta</option>
       </select>
-
       {opcion && <p>Seleccionaste: <strong>{opcion}</strong></p>}
+      <div>
+        <div>
+          <TelemetryTempe th={opcion}/>
+        </div>
+        <div>
+          <TelemetryPresion th={opcion}/>
+        </div>
+        <div>
+          <TelemetryHume th={opcion} />
+        </div>
+      </div>
     </div>
   );
 };
