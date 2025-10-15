@@ -96,7 +96,7 @@ const TelemetryPresion = () => {
             y: {
                 title: {
                     display: true,
-                    text: 'Presion (Pa)'
+                    text: `Presion (Pa) -  Estado:${status}`
                 },
                 min: 0, // Coincide con tu TEMP_RANGE
                 max: 1000, // Coincide con tu TEMP_RANGE
@@ -111,21 +111,11 @@ const TelemetryPresion = () => {
                     maxTicksLimit: 15,
                 }
             }
-        },
-        plugins: {
-            legend: {
-                position: 'top',
-            },
-            title: {
-                display: true,
-                text: 'Presion en Tiempo Real (THB-02)',
-            },
-        },
+        }
     };
 
     return (
-        <div>
-            <h3>Grafico en Tiempo Real - Presion</h3>            
+        <div>    
             <div style={{ height: '250px', width: '100%' }}>
                 {/* Renderizar el componente Line */}
                 <Line options={options} data={data} />

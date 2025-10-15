@@ -93,7 +93,7 @@ const TelemetryHume = () => {
             y: {
                 title: {
                     display: true,
-                    text: 'Humedad (%)'
+                    text: `Humedad (%) -  Estado:${status}`
                 },
                 min: 0, // Coincide con tu TEMP_RANGE
                 max: 100, // Coincide con tu TEMP_RANGE
@@ -108,16 +108,7 @@ const TelemetryHume = () => {
                     maxTicksLimit: 15,
                 }
             }
-        },
-        plugins: {
-            legend: {
-                position: 'top',
-            },
-            title: {
-                display: true,
-                text: `Humedad (%) en Tiempo Real (THB-02) - Estado:${status}`,
-            },
-        },
+        }
     };
 
     return (

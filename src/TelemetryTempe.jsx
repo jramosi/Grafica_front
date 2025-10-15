@@ -38,7 +38,7 @@ const TelemetryTempe = () => {
         const socket = io(BACKEND_URL);
 
         socket.on('connect', () => {
-            setStatus('Conectado al Backend ');
+            setStatus('Recibiendo datos - Temperatura');
         });
         
         // --- HANDLER CLAVE: RECIBIR Y PROCESAR DATOS ---
@@ -95,7 +95,7 @@ const TelemetryTempe = () => {
             y: {
                 title: {
                     display: true,
-                    text: 'Temperatura (°C)'
+                    text: `Temperatura (°C) -  Estado:${status}`
                 },
                 min: 0, // Coincide con tu TEMP_RANGE
                 max: 50, // Coincide con tu TEMP_RANGE
@@ -110,16 +110,7 @@ const TelemetryTempe = () => {
                     maxTicksLimit: 15,
                 }
             }
-        },
-        plugins: {
-            legend: {
-                position: 'top',
-            },
-            title: {
-                display: true,
-                text: `Temperatura (°C) en Tiempo Real (THB-02) - Estado:${status}`,
-            },
-        },
+        }
     };
 
     return (
