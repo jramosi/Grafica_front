@@ -25,6 +25,7 @@ ChartJS.register(
 
 const MAX_POINTS = 360; // Máximo de puntos a mostrar (igual que en tu config de Python)
 const BACKEND_URL = 'https://grafica-back.onrender.com'; // Asegúrate de que coincida con tu Node.js
+const SelectHBB = process.env.SELECTOR_THB;
 
 const TelemetryTempe = () => {
     const [status, setStatus] = useState('Conectando...');
@@ -44,7 +45,7 @@ const TelemetryTempe = () => {
         // --- HANDLER CLAVE: RECIBIR Y PROCESAR DATOS ---
         socket.on('telemetry', (data) => {
             // Solo graficaremos el primer dispositivo como ejemplo (THB-01)
-            if (data.device === "THB-02") {
+            if (data.device === SelectHBB) {
                 
                 const timeLabel = new Date(data.ts * 1000 || Date.now()).toLocaleTimeString();
                 console.log("-------------------------------------------------------");
