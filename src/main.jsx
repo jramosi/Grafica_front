@@ -10,6 +10,10 @@ import App from './App'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <>
+    <h1>HOLA MUNDO</h1>
     <App/>
+    </>
+    
   </StrictMode>
 )
