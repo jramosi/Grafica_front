@@ -5,6 +5,8 @@ import './App.css'
 const SelectHBB = process.env.SELECTOR_THB;
 
 const App = () => {
+  console.log("vvariavle:"+ SelectHBB);
+  
   return (
     
     <>
