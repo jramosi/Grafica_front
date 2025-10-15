@@ -38,7 +38,7 @@ const TelemetryPresion = () => {
         const socket = io(BACKEND_URL);
 
         socket.on('connect', () => {
-            setStatus('Conectado al Backend ');
+            setStatus('Recibiendo Datos ');
         });
         
         // --- HANDLER CLAVE: RECIBIR Y PROCESAR DATOS ---

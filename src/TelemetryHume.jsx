@@ -38,7 +38,7 @@ const TelemetryHume = () => {
         const socket = io(BACKEND_URL);
 
         socket.on('connect', () => {
-            setStatus('Conectado al Backend ');
+            setStatus('Recibiendo datos');
         });
         
         // --- HANDLER CLAVE: RECIBIR Y PROCESAR DATOS ---

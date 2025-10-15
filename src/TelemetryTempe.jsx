@@ -38,7 +38,7 @@ const TelemetryTempe = () => {
         const socket = io(BACKEND_URL);
 
         socket.on('connect', () => {
-            setStatus('Recibiendo datos - Temperatura');
+            setStatus('Recibiendo Datos');
         });
         
         // --- HANDLER CLAVE: RECIBIR Y PROCESAR DATOS ---
