@@ -25,7 +25,7 @@ ChartJS.register(
 
 const MAX_POINTS = 360; // Máximo de puntos a mostrar (igual que en tu config de Python)
 const BACKEND_URL = 'https://grafica-back.onrender.com'; // Asegúrate de que coincida con tu Node.js
-const SelectHBB = process.env.SELECTOR_THB;
+const SelectHBB = process.env.REACT_APP_SELECTOR_THB;
 
 const TelemetryPresion = () => {
     const [status, setStatus] = useState('Conectando...');

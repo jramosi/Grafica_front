@@ -2,7 +2,7 @@ import TelemetryTempe from './TelemetryTempe'
 import TelemetryPresion from './TelemetryPresion'
 import TelemetryHume from './TelemetryHume'
 import './App.css'
-const SelectHBB = process.env.SELECTOR_THB;
+const SelectHBB = process.env.REACT_APP_SELECTOR_THB;
 
 const App = () => {
   console.log("vvariavle:"+ SelectHBB);
